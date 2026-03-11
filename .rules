@@ -1,0 +1,95 @@
+# AGENT RULES
+
+## Rule 1 - Stack Discipline
+Use only:
+- React 19.2
+- Next.js 16.1.6
+- TypeScript 5.9
+- Node 25.8.0
+
+Do not replace the stack unless a hard incompatibility is proven.
+
+## Rule 2 - MVP Discipline
+Focus on the MVP:
+- GitHub profile URL input
+- public profile extraction
+- overview extraction
+- repository extraction
+- deterministic summary
+- responsive UI
+- tests
+- docs
+
+Avoid premature enhancements unless core MVP is complete.
+
+## Rule 3 - Security First
+- accept only GitHub profile URLs
+- restrict outbound requests to GitHub public domains only
+- prevent SSRF
+- validate on both client and server
+- use safe server-side fetching
+- do not expose secrets
+- do not scrape authenticated pages
+
+## Rule 4 - Deterministic Output
+The summary engine must be rule-based for MVP.
+Do not use LLM summarization for the core feature.
+
+## Rule 5 - Clean Architecture
+Separate:
+- validation
+- fetch logic
+- parsing
+- summarization
+- UI rendering
+- API contracts
+- tests
+
+## Rule 6 - Fail Gracefully
+If some data cannot be extracted:
+- continue when safe
+- return partial results
+- include warnings
+- avoid crashing the user flow
+
+## Rule 7 - Testing Required
+Critical logic must have tests:
+- validation
+- normalization
+- parsing
+- summary rules
+- API route
+
+## Rule 8 - Documentation Required
+Do not consider implementation complete without:
+- README
+- INSTALL
+- FEATURES
+- ARCHITECTURE
+- API
+- SECURITY
+- CHANGELOG
+
+## Rule 9 - No Hallucinations
+Never invent:
+- skills
+- employers
+- identity
+- contribution activity
+- expertise level
+
+Inference must be clearly marked and evidence-based.
+
+## Rule 10 - Work Sequence
+Work in this order:
+1. plan
+2. folder structure
+3. types
+4. validation
+5. data fetching
+6. parsing
+7. summarization
+8. API
+9. UI
+10. tests
+11. docs
